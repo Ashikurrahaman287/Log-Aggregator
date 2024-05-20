@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Aggregator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<h1>Log Aggregator</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Timestamp</th>
+        <th>Source</th>
+        <th>Message</th>
+        <th>Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{range .}}
+    <tr>
+        <td>{{.Timestamp}}</td>
+        <td>{{.Source}}</td>
+        <td>{{.Message}}</td>
+        <td>{{.Level}}</td>
+    </tr>
+    {{end}}
+    </tbody>
+</table>
+</body>
+</html>
